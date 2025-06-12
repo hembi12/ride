@@ -1,33 +1,77 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+
+const cars = [
+  {
+    src: "/auto.png",
+    alt: "Vehículo 1",
+    marca: "Nissan Versa 2022",
+    color: "Gris Oxford",
+    placas: "ABC-123-CDMX",
+    servicio: "Uber Comfort",
+    caracteristicas: "Aire acondicionado, asientos cómodos, espacio para equipaje",
+    flip: false,
+  },
+  {
+    src: "/auto2.png",
+    alt: "Vehículo 2",
+    marca: "Chevrolet Onix 2023",
+    color: "Blanco",
+    placas: "XYZ-456-CDMX",
+    servicio: "UberX",
+    caracteristicas: "Buen rendimiento de combustible, interiores modernos, Bluetooth",
+    flip: true,
+  },
+];
 
 export default function About() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleInfo = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <section id="about" className="bg-neutral-100 py-20 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        {cars.map((car, index) => (
+          <div key={index} className="relative group">
+            {/* Imagen */}
+            <div className="w-full max-w-full h-[250px] flex justify-center items-center border border-indigo-600 rounded-lg relative overflow-hidden bg-white">
+              <Image
+                src={car.src}
+                alt={car.alt}
+                width={400}
+                height={250}
+                className={`object-contain ${car.flip ? "transform -scale-x-100" : ""}`}
+              />
 
-        {/* Columna izquierda: foto del vehículo */}
-        <div className="flex justify-center">
-          <Image
-            src="/auto.png" // Reemplaza con la ruta real de la imagen del vehículo
-            alt="Foto del vehículo"
-            width={400}
-            height={250}
-            className="rounded-lg shadow-lg object-cover border border-indigo-600"
-          />
-        </div>
+              {/* Botón "Ver más" */}
+              <button
+                onClick={() => toggleInfo(index)}
+                className="absolute bottom-3 right-3 bg-black/60 text-white text-sm px-4 py-1 rounded hover:bg-black/80 transition z-10"
+              >
+                {activeIndex === index ? "Ocultar" : "Ver más"}
+              </button>
 
-        {/* Columna derecha: info */}
-        <div className="text-left space-y-3">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Información del vehículo</h2>
-          <p><strong>Marca y modelo:</strong> Nissan Versa 2022</p>
-          <p><strong>Color:</strong> Gris Oxford</p>
-          <p><strong>Placas:</strong> ABC-123-CDMX</p>
-          <p><strong>Servicio:</strong> Uber Comfort</p>
-          <p><strong>Características:</strong> Aire acondicionado, asientos cómodos, espacio para equipaje</p>
-        </div>
-
+              {/* Panel deslizable */}
+              <div
+                className={`absolute bottom-0 left-0 w-full px-4 py-3 text-sm text-gray-900 bg-white/95 backdrop-blur-sm shadow-md transition-transform duration-700 ease-in-out ${
+                  activeIndex === index ? "translate-y-0" : "translate-y-full"
+                }`}
+              >
+                <h2 className="font-bold text-base mb-1">Información del vehículo</h2>
+                <p><strong>Marca y modelo:</strong> {car.marca}</p>
+                <p><strong>Color:</strong> {car.color}</p>
+                <p><strong>Placas:</strong> {car.placas}</p>
+                <p><strong>Servicio:</strong> {car.servicio}</p>
+                <p><strong>Características:</strong> {car.caracteristicas}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
