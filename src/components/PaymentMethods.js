@@ -13,7 +13,7 @@ export default function PaymentMethods() {
       <div className="absolute inset-0 bg-black/30 z-0" />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center mb-6">
-        <h2 className="text-3xl font-bold">Métodos de pago</h2>
+        <h2 className="text-2xl md:text-3xl font-bold">Métodos de pago</h2>
       </div>
 
       <div className="relative z-10 flex flex-col sm:flex-row sm:flex-wrap justify-center items-stretch gap-6 max-w-6xl mx-auto">

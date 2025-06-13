@@ -1,6 +1,5 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Benefits from '../components/Benefits';
 import About from '../components/About';
 import Services from '../components/Services';
 import BookingSteps from '../components/BookingSteps';

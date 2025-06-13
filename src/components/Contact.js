@@ -14,7 +14,7 @@ export default function Contact() {
       {/* Contenido */}
       <div className="relative z-10 max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">Contacto directo</h2>
-        <p className="text-neutral-300 p-2 bg-black/30 backdrop-blur-md rounded-xl font-semibold mb-8">
+        <p className="w-fit max-w-xs sm:max-w-md mx-auto text-neutral-300 p-2 bg-black/30 backdrop-blur-md rounded-xl font-medium mb-8">
           ¿Tienes dudas o prefieres reservar por mensaje? Contáctame
           directamente por WhatsApp.
         </p>
