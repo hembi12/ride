@@ -19,6 +19,7 @@ export default function Booking() {
     servicio: "",
     tipoViaje: "ida",
     personas: "",
+    metodoPago: "",
     mostrarInputPasajeros: false,
   });
 
@@ -66,9 +67,9 @@ export default function Booking() {
           hora: form.hora,
           fechaVuelta: form.fechaVuelta || "",
           horaVuelta: form.horaVuelta || "",
+          metodoPago: form.metodoPago || "",
         }).toString();
 
-        // ✅ Redirección automática
         window.location.href = `/checkout?${queryParams}`;
       }
     }, 1000);

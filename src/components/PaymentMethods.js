@@ -18,9 +18,9 @@ export default function PaymentMethods() {
 
       <div className="relative z-10 flex flex-col sm:flex-row sm:flex-wrap justify-center items-stretch gap-6 max-w-6xl mx-auto">
         {/* Tarjeta */}
-        <div className="flex-1 min-w-[250px] bg-black/70 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+        <div className="flex-1 min-w-[250px] bg-black/30 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
           <CreditCard className="w-10 h-10 mb-3 text-indigo-400" />
-          <h3 className="text-lg font-semibold mb-1">Tarjeta</h3>
+          <h3 className="text-xl font-semibold mb-1">Tarjeta</h3>
           <p className="text-sm text-neutral-300">Crédito o débito</p>
           <p className="text-xs text-green-400 mt-2">
             Pago 100% seguro con terminal mercado pago.
@@ -28,9 +28,9 @@ export default function PaymentMethods() {
         </div>
 
         {/* Transferencia */}
-        <div className="flex-1 min-w-[250px] bg-black/70 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+        <div className="flex-1 min-w-[250px] bg-black/30 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
           <Banknote className="w-10 h-10 mb-3 text-green-400" />
-          <h3 className="text-lg font-semibold mb-1">Transferencia</h3>
+          <h3 className="text-xl font-semibold mb-1">Transferencia</h3>
           <p className="text-sm text-neutral-300">Bancaria directa</p>
           <p className="text-xs text-green-400 mt-2">
             Datos verificados y confirmación inmediata.
@@ -38,9 +38,9 @@ export default function PaymentMethods() {
         </div>
 
         {/* Efectivo */}
-        <div className="flex-1 min-w-[250px] bg-black/70 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+        <div className="flex-1 min-w-[250px] bg-black/30 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
           <Wallet className="w-10 h-10 mb-3 text-amber-400" />
-          <h3 className="text-lg font-semibold mb-1">Efectivo</h3>
+          <h3 className="text-xl font-semibold mb-1">Efectivo</h3>
           <p className="text-sm text-neutral-300">Pago al abordar</p>
           <p className="text-xs text-green-400 mt-2">
             Sin comisiones ni cargos adicionales.
@@ -48,21 +48,13 @@ export default function PaymentMethods() {
         </div>
 
         {/* Link de pago */}
-        <div className="flex-1 min-w-[250px] bg-black/70 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+        <div className="flex-1 min-w-[250px] bg-black/30 backdrop-blur-md rounded-xl p-6 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
           <Link className="w-10 h-10 mb-3 text-cyan-400" />
-          <h3 className="text-lg font-semibold mb-1">Link de pago</h3>
+          <h3 className="text-xl font-semibold mb-1">Link de pago</h3>
           <p className="text-sm text-neutral-300">Paga desde tu celular</p>
           <p className="text-xs text-green-400 mt-2">
             Enlace directo a pasarela segura.
           </p>
-          <a
-            href="https://tulinkdepago.com" // reemplaza con tu link real
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 text-sm underline text-cyan-300 hover:text-cyan-200 transition"
-          >
-            Ir al enlace de pago
-          </a>
         </div>
       </div>
 

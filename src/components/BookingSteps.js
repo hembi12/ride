@@ -30,7 +30,7 @@ export default function BookingSteps() {
       className="py-20 px-6 bg-neutral-100 text-black"
     >
       <div className="max-w-5xl mx-auto text-center mb-6">
-        <h2 className="text-3xl font-bold">Cómo reservar tu traslado</h2>
+        <h2 className="text-2xl md:text-3xl font-bold">¿Cómo reservar?</h2>
       </div>
 
       <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">

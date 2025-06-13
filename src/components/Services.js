@@ -54,8 +54,8 @@ export default function Services() {
 
   return (
     <section id="servicios" className="py-20 px-6 bg-neutral-100 text-black">
-      <div className="max-w-6xl mx-auto text-center mb-6">
-        <h2 className="text-3xl font-bold">Servicios de transporte privado</h2>
+      <div className="max-w-6xl mx-auto text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold">Servicios de transporte privado</h2>
       </div>
 
       <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">

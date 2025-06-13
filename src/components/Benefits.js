@@ -56,7 +56,7 @@ const benefits = [
   },
 ];
 
-export default function Hero() {
+export default function Benefits() {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -84,7 +84,7 @@ export default function Hero() {
   return (
     <section
       id="beneficios"
-      className="relative w-full min-h-screen py-28 px-6 text-white bg-fixed bg-center bg-cover overflow-hidden shadow-xl"
+      className="relative py-28 px-6 text-white bg-fixed bg-center bg-cover overflow-hidden shadow-xl"
       style={{ backgroundImage: "url('/hero-bg.jpg')" }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-0" />
@@ -114,7 +114,7 @@ export default function Hero() {
               key={index}
               onClick={() => setCurrent(index)}
               className={`w-3 h-3 rounded-full transition ${
-                index === current ? "bg-white" : "bg-neutral-800"
+                index === current ? "bg-white" : "bg-gray-500"
               }`}
             />
           ))}

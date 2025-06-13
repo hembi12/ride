@@ -180,6 +180,24 @@ export default function BookingForm({
         </div>
       )}
 
+      {/* Método de pago */}
+      <div className="space-y-1">
+        <label className="block font-medium">Método de pago</label>
+        <select
+          name="metodoPago"
+          value={form.metodoPago || ""}
+          onChange={handleChange}
+          className="w-full px-4 py-2 rounded bg-gray-100 text-black"
+          required
+        >
+          <option value="">Selecciona un método de pago</option>
+          <option value="tarjeta">Tarjeta de crédito/débito</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="transferencia">Transferencia bancaria</option>
+          <option value="link">Link de pago</option>
+        </select>
+      </div>
+
       {/* Resultado de verificación y acción */}
       {disponible === false && (
         <p className="text-red-600 font-medium text-center">

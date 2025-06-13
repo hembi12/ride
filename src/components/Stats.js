@@ -148,7 +148,7 @@ function StatCard({ icon, value, suffix = "", label, animated = true }) {
   return (
     <div
       ref={ref}
-      className="bg-black/70 backdrop-blur-md text-white rounded-xl p-6 shadow-md hover:shadow-lg transition transform-gpu hover:scale-[1.02] hover:-translate-y-1"
+      className="bg-black/30 backdrop-blur-md text-white rounded-xl p-6 shadow-md hover:shadow-lg transition transform-gpu hover:scale-[1.02] hover:-translate-y-1"
     >
       <div className="flex items-center gap-4">
         <div className="w-10 h-10 flex-shrink-0">{icon}</div>

@@ -9,9 +9,9 @@ export default function Navbar() {
   const sections = [
     { id: "servicios", label: "Servicios" },
     { id: "estadisticas", label: "Estadísticas" },
-    { id: "about", label: "Vehículo" },
-    { id: "opiniones", label: "Opiniones" },
-    { id: "como-reservar", label: "Cómo reservar" },
+    { id: "about", label: "Vehículos" },
+    { id: "opiniones", label: "Valoraciones" },
+    { id: "como-reservar", label: "¿Cómo reservar?" },
     { id: "paymentmethods", label: "Métodos de pago" },
     { id: "reserva", label: "Reserva online" },
     { id: "contacto", label: "Contacto" },
@@ -30,7 +30,7 @@ export default function Navbar() {
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="text-gray-700 hover:text-black transition font-medium"
+              className="text-base text-gray-700 hover:text-indigo-700 transition font-medium"
             >
               {section.label}
             </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="block text-gray-700 hover:text-black"
+              className="block text-base text-gray-700 hover:text-indigo-700 font-medium"
               onClick={() => setIsOpen(false)}
             >
               {section.label}
